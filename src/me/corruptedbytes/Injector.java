@@ -22,7 +22,7 @@ public class Injector {
 	
 	public void injectAsar(String asarFile) throws Exception {
 		if (getDiscordPath() != null && checkCreatedFolder()) {
-			new File(getDiscordPath() + "app").mkdir();
+			new File(getDiscordPath() + File.separator + "app").mkdir();
 
 			Files.copy(Paths.get(asarFile), Paths.get(getDiscordPath() + "app" + File.separator + "update.asar"));
 			
