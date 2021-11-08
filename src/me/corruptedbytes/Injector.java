@@ -68,7 +68,7 @@ public class Injector {
 	}
 	
 	private boolean checkCreatedFolder() {
-		if (!new File(getDiscordPath() + "app").exists()) {
+		if (!new File(getDiscordPath() + File.separator + "app").exists()) {
 			return true;
 		}
 		return false;
